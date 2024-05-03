@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "script/jquery-3.7.1.min.js"></script>
+    <style>
+        body{
+            display: flex;
+            flex-direction: center;
+            height: 100vh;
+        }
+        .container{
+            position: relative;
+            margin: 0 auto;
+            width : 800px;
+            height: 400px;
+            border: 1px solid red;
+            /* overflow: hidden; */
+        }
+
+        #imgs{
+            position: absolute;
+            width : 4800px;
+            height: 400px;
+            border: 1px dotted blue;
+
+        }
+        img{
+            width : 800px;
+            height: 400px;
+        }
+
+        .remote{
+            position: relative;
+            border: 1px solid white;
+            width : 200px;
+            height: 60px;
+            top : 340px;
+            left : 600px;
+        }
+        .remote div{
+            position: relative;
+            border-radius: 50%;
+            width : 13px;
+            height: 13px;
+            background: white;
+            float: left;
+            margin: 23px 1px;
+            line-height: 15px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        .discription{
+            position: absolute;
+            background-color: black;
+            width : 800px;
+            height: 60px;
+            top : 400px;    
+            /* top 을 400으로 수정해서 밑에서부터 나오게 만듬 */
+        }
+
+        #title{
+            position: relative;
+            color : white;
+            font-weight: bold;
+            font-size: 80%;
+            left : 50px;
+        }
+
+        #text{
+            position: relative;
+            font-size: 50%;
+            left: 50px;
+            color: white;
+        }
+
+        .page{
+            position: relative;
+            color : white;
+        }
+
+        .remote .selected{
+            width : 22px;
+            height: 10px;
+            border-radius: 14px;
+        }
+
+    </style>
+    <script>
+        $(function(){
+            var timer;
+            var imgNum = 0;
+            var dis;
+            var state = false;
+
+                window.setInterval(function(){
+                        imgNum++;
+                        if(imgNum > 5) imgNum = 0;
+                        dis = -800 * imgNum;
+
+                        $("#imgs").animate({left : dis}, 1000); // 이미지 바꿔주기
+
+                        $(".remote div").removeClass("selected");
+                        $(".remote div").eq(imgNum).addClass("selected"); // 이미지가 변할 때마다 버튼 너비 변경하기
+
+                        if(imgNum==0) $("#dis5").animate({top : 400}, 0); 
+
+                        $("#dis"+(imgNum-1)).animate({top : 400}, 0); // 설명바 내리기
+                        $("#dis"+imgNum).animate({top : 340}, 1000); // 설명바 올리기
+                        
+                }, 3000);
+        });
+    </script>
+</head>
+<body>
+    <div class = "container">
+        <div id = "imgs">
+            <img src = "images/Koala.jpg"><img src = "images/Chrysanthemum.jpg"><img src = "images/Desert.jpg"><img src = "images/Hydrangeas.jpg"><img src = "images/Jellyfish.jpg"><img src = "images/Lighthouse.jpg">
+        </div>
+        <div class = "remote">
+            <div class = "selected"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class = "discription" id = "dis0">
+            <div id = "title"> First Image </div>
+            <div id = "text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eveniet placeat id optio. 
+            </div>
+        </div>
+        <div class = "discription" id = "dis1">
+            <div id = "title"> Second Image </div>
+            <div id = "text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eveniet placeat id optio. 
+            </div>
+        </div>
+        <div class = "discription" id = "dis2">
+            <div id = "title"> Third Image </div>
+            <div id = "text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eveniet placeat id optio. 
+            </div>
+        </div>
+        <div class = "discription" id = "dis3">
+            <div id = "title"> Forth Image </div>
+            <div id = "text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eveniet placeat id optio. 
+            </div>
+        </div>
+        <div class = "discription" id = "dis4">
+            <div id = "title"> Fifth Image </div>
+            <div id = "text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eveniet placeat id optio. 
+            </div>
+        </div>
+        <div class = "discription" id = "dis5">
+            <div id = "title"> Sixth Image </div>
+            <div id = "text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Eveniet placeat id optio. 
+            </div>
+        </div>
+        <div class = "page">
+            1/6
+        </div>
+    </div>
+</body>
+</html>
