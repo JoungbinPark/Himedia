@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoinForm.html</title>
+</head>
+<body>
+    <form>
+    <table bgcolor = "blue" align = "center" width = "700">
+        <tr bgcolor = "white" height = "30">
+            <th width = 200>
+                아이디
+            </th>
+            <td width = 500>
+                <input type = "text" name = "userid" size = "10" />
+            </td>
+        </tr>
+        <tr bgcolor = "white" height = "30">
+            <th width = 200>
+                Password
+            </th>
+            <td width = 500>
+                <input type = "password" name = "password"  size = "10" />
+            </td>
+        </tr>
+        <tr bgcolor = "white" height = "30">
+            <th width = 200>
+                전화번호
+            </th>
+            <td width = 500>
+                <select name = "phone1">
+                    <option value = "0" selected>010</option>
+                    <option value = "1">011</option>
+                    <option value = "2">012</option>
+                    <option value = "3">013</option>
+                    <option value = "4">017</option>
+                </select>
+                -
+                <input type = "text" name = "phone2" size ="3" />
+                -
+                <input type = "text" name = "phone3" size ="3" />
+
+            </td>
+        </tr>
+        <tr bgcolor = "white" height = "30">
+            <th width = 200>
+                성별
+            </th>
+            <td width = 500>
+                <input type = "radio" name = "gender" value ="m" /> 남자
+                <input type = "radio" name = "gender" value ="f" /> 여자
+            </td>
+        </tr>
+        <tr bgcolor = "white" height = "30">
+            <th width = 200>
+                알게 된 경로
+            </th>
+            <td width = 500>
+                <input type = "checkbox" name = "route" value ="1" /> 신문
+                <input type = "checkbox" name = "route" value ="2" /> TV
+                <input type = "checkbox" name = "route" value ="3" /> 지인소개
+                <input type = "checkbox" name = "route" value ="4" /> 기타
+
+            </td>
+        </tr>
+        <tr bgcolor = "white" height = "30">
+            <th width = 200>
+                직업
+            </th>
+            <td width = 500>
+                <select name = "job">
+                    <option value = "0" selected>학생</option>
+                    <option value = "1">회사원</option>
+                    <option value = "2">공무원</option>
+                    <option value = "3">교사</option>
+                    <option value = "4">백수</option>
+                </select>
+            </td>
+        </tr>
+        <tr bgcolor = "white" height = "30">
+            <th width = 200>
+                생년월일
+            </th>
+            <td width = 500>
+                <input type = "text" name = "year" size = "3" />년
+                <select name = "month" >
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                    <option value = "6">6</option>
+                    <option value = "7">7</option>
+                    <option value = "8">8</option>
+                    <option value = "9">9</option>
+                    <option value = "10">10</option>
+                    <option value = "11">11</option>
+                    <option value = "12">12</option>
+                </select> 월
+                <select name = "day">
+                    <option value = "1">1</option>
+                    <option value = "2">2</option>
+                    <option value = "3">3</option>
+                    <option value = "4">4</option>
+                    <option value = "5">5</option>
+                    <option value = "6">6</option>
+                    <option value = "7">7</option>
+                    <option value = "8">8</option>
+                    <option value = "9">9</option>
+                    <option value = "10">10</option>
+                    <option value = "11">11</option>
+                    <option value = "12">12</option>
+                    <option value = "13">13</option>
+                    <option value = "14">14</option>
+                    <option value = "15">15</option>
+                    <option value = "16">16</option>
+                    <option value = "17">17</option>
+                    <option value = "18">18</option>
+                    <option value = "19">19</option>
+                    <option value = "20">20</option>
+                    <option value = "21">21</option>
+                    <option value = "22">22</option>
+                    <option value = "23">23</option>
+                    <option value = "24">24</option>
+                    <option value = "25">25</option>
+                    <option value = "26">26</option>
+                    <option value = "27">27</option>
+                    <option value = "28">28</option>
+                    <option value = "29">29</option>
+                    <option value = "30">30</option>
+                    <option value = "31">31</option>
+                </select> 일
+
+            </td>
+        </tr>
+        <tr bgcolor = "white" height = "30">
+            <th width = 200>
+                주소
+            </th>
+            <td width = 500>
+                <input type = "text" name = "adress" size = "45" />
+            </td>
+        </tr>
+        <tr bgcolor = "white" height = "30" >
+            <th>인사말</th>
+            <td> 
+                <!-- 멀티라인 텍스트 입력란 -->
+                <textarea cols="50" rows="10" name="intro">안녕하세요.</textarea>
+            </td>
+
+        <tr bgcolor = "white" height = "30" align = "center">
+            <td colspan = "2">
+                <input type = "submit" value = "회원가입" />
+                <input type = "button" value = "다시작성" />
+                
+            </td>
+        </tr>
+    </table>
+    </form>
+
+
+    
+</body>
+</html>

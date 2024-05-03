@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19_ImageControl05.html</title>
+    <style type = "text/css">
+        #view{position:relative; width:600px; height:400px; border:3px solid blue; left:50px; overflow:hidden;}
+        img{width:600px; height:400px;}
+        #imgs{position:absolute; width:4800px; height:400px; left:0; top:0px; border: 1px dashed red; }
+        #remote{ position : relative; width:340px; height:50px; border:1px solid white; top :350px; margin: 0 auto;}
+        #remote div{position:relative; width:20px; height:20px; background:white; border-radius: 50%; float:left; margin:15px 4px; border:1px solid black; text-align: center; line-height: 20px; font-weight: bold; cursor: pointer;}
+        #remote .selected{background:black; color:white; border:1px solid white; box-sizing: border-box;}
+
+    </style>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var imgNum = 1;
+            var timer;
+            var running = false;
+            $("#remote div").click(function(){
+                var index = $(this).index();
+                if(index == 0){         //왼쪽
+                    if(imgNum>1){
+                        imgNum--;
+                        $("#imgs").animate({left:(-600*(imgNum-1))}, 500);
+                    }
+                }
+                else if(index == 9){    //오른쪽
+                    if(imgNum<8){
+                        imgNum++;
+                        $("#imgs").animate({left:(-600*(imgNum-1))}, 500);
+                    }
+                }
+                else if(index == 10){   //자동
+                    if(running == false){
+                        timer = window.setInterval(function(){
+                            imgNum++;
+                            if(imgNum>8) imgNum=1;
+                            $('#imgs').animate({left:-600*(imgNum-1)}, 500);
+                            $('#remote div').removeClass("selected");
+                            $('#remote div').eq(imgNum).addClass("selected");
+                        }, 1000)
+                        $('#remote div').eq(10).html('■');
+                        running = true;
+                    }else {
+                        window.clearInterval(timer)
+                        $('#remote div').eq(10).html('▶');
+                        running = false;
+                    }   
+                }
+                else{                   //인덱스로 바로가기
+                    imgNum = index;
+                    $("#imgs").animate({left:(-600*(index-1))}, 500);
+                }
+                $('#remote div').removeClass("selected");
+                $('#remote div').eq(imgNum).addClass("selected");
+            })
+        })
+    </script>
+</head>
+<body>
+    <div id = "view">
+        <div id="imgs">
+            <img src = "images/Koala.jpg" /><img src = "images/Chrysanthemum.jpg" /><img src = "images/Desert.jpg" /><img src = "images/Hydrangeas.jpg" /><img src = "images/Jellyfish.jpg" /><img src = "images/Lighthouse.jpg" /><img src = "images/Penguins.jpg" /><img src = "images/Tulips.jpg" />
+        </div>
+        <div id = "remote">
+            <div>◁</div><div class="selected">1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>▷</div><div>▶</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout05Byme.html</title>
+    <style type = "text/css">
+    .base{
+        width : 100%;
+        height : 200px;
+        background-color: rgb(230, 230, 127);
+    }
+
+    .form1{
+        width : 400px;
+        height : 100%;
+        margin : 0 auto;
+    }
+
+    .form1 .title{
+        width : 100%;
+        height : 40%;
+        border : 1px solid red;
+        margin : 0 auto;
+        text-align: center;
+        line-height: 80px;
+        font-size : 1.5em;
+        font-weight : bold;
+        box-sizing: border-box;
+    }
+
+    .form1 .text {
+        width : 100%;
+        height : 60%;
+        border : 1px solid red;
+        margin : 0 auto;
+        box-sizing: border-box;
+    }
+    
+    .base .form2{
+        position : relative;
+        width : 1000px;
+        height: 100%;
+        margin : 0 auto;
+        border : 1px solid red;
+    }
+
+
+    .img{
+        position : absolute;
+        width : 200px;
+        height : 200px;
+        background-image: url(images/Koala.jpg);
+        background-size : 150%;
+        background-position: -50px -20px;
+        border-radius: 50%;
+    }
+
+    #img1 {
+        left : 0;
+    }
+
+    #img2 {
+        left : 500px;
+    }
+
+    #img3{
+        left : 0;
+    }
+
+    #img4{
+        left : 500px;
+    }
+
+    .rect{
+        position : absolute;
+        width : 300px;
+        height : 100%;
+        background-color: white;
+    }
+
+    #rect1{
+        left : 200px;
+    }
+
+    #rect2{
+        right : 0px;
+    }
+
+    #rect3{
+        left : 200px;
+    }
+
+    #rect4{
+        right : 0px;
+    }
+
+    .rect .title{
+        width : 100%;
+        height : 35%;
+        background-color: blue;
+        border: 1px solid blue;
+        color : white;
+        font-size : 200%;
+        font-weight: bold;
+        margin : 0 auto;
+        text-align: center;
+        line-height: 70px;
+        box-sizing: border-box;
+    }
+
+    .rect .text{
+        width : 100%;
+        height: 65%;
+        color : blue;
+        border : 1px solid green;
+        box-sizing: border-box;
+    }
+    
+    .rect:nth-child(1){left : 200px;}
+
+
+    </style>
+
+</head>
+<body>
+
+    <div class = "base">
+        <div class = "form1">
+            <div class = "title">
+                Content Title01
+            </div>
+            <div class = "text">
+                이 헌법은 1988년 2월 25일부터 시행한다. 다만, 이 헌법을 시행하기 위하여 필요한 법률의 제정·개정과 이 헌법에 의한 대통령 및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <div class = "base">
+        <div class = "form2">
+            <div id="img1" class = "img">
+            </div>
+            <div id="rect1" class = "rect">
+                <div class = "title">
+                    Segment
+                </div>
+                <div class = "text">
+                    국무총리는 국무위원의 해임을 대통령에게 건의할 수 있다. 대통령은 헌법과 법률이 정하는 바에 의하여 공무원을 임면한다. 행정권은 대통령을 수반으로 하는 정부에 속한다.
+                </div>
+            </div>
+            <div id="img2" class = "img">
+            </div>
+            <div id="rect2" class = "rect">
+                <div class = "title">
+                    Segment
+                </div>
+                <div class = "text">
+                    국무총리는 국무위원의 해임을 대통령에게 건의할 수 있다. 대통령은 헌법과 법률이 정하는 바에 의하여 공무원을 임면한다. 행정권은 대통령을 수반으로 하는 정부에 속한다.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div class = "base">
+        <div class = "form2">
+            <div id="img3" class = "img">
+            </div>
+            <div id="rect3" class = "rect">
+                <div class = "title">
+                    Segment
+                </div>
+                <div class = "text">
+                    국무총리는 국무위원의 해임을 대통령에게 건의할 수 있다. 대통령은 헌법과 법률이 정하는 바에 의하여 공무원을 임면한다. 행정권은 대통령을 수반으로 하는 정부에 속한다.
+                </div>
+            </div>
+            <div id="img4" class = "img">
+            </div>
+            <div id="rect4" class = "rect">
+                <div class = "title">
+                    Segment
+                </div>
+                <div class = "text">
+                    국무총리는 국무위원의 해임을 대통령에게 건의할 수 있다. 대통령은 헌법과 법률이 정하는 바에 의하여 공무원을 임면한다. 행정권은 대통령을 수반으로 하는 정부에 속한다.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

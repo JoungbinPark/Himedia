@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_JQueryEx02.html</title>
+    <style type = "text/css">
+        body{background : royalblue;}
+        a { text-decoration: none; display: block; font-size : 40px; margin : 5px 0; color : #fff; transition : 0.5s; }
+        .gnb {position : absolute; top : 100px; left : 50px;}
+    </style>
+
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+        //메뉴에 마우스가 올라가면 해당 메뉴는 opacity 1 나머지 opacity 0.3
+        //메뉴에 마우스가 완전히 빠져나가면 모든 메뉴의 opacity 1
+        $(function(){
+            $('a').mouseover(function(){
+                $('a').css("opacity", "0.3");
+                $(this).css("opacity", "1");
+            })
+
+            $('a').mouseout(function(){
+                $('a').css("opacity", "1");
+            })
+
+        })
+
+
+    </script>
+
+</head>
+<body>
+    <div class="gnb">
+        <a href = "#none">New Arrivals</a>
+        <a href = "#none">Summer Collection</a>
+        <a href = "#none">Winter Collection</a>
+        <a href = "#none">Special Offers</a>
+        <a href = "#none">Trends</a>
+
+    </div>
+</body>
+</html>

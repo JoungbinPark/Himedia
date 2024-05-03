@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18_ImageControl02.html</title>
+    <script type = "text/javaScript">
+        //그림을 클릭하면 입력창이 나오고, 거기에 숫자 하나를 입력받아 "숫자.jpg" 파일로 그림을 바꾸는 코드를 완성해주세요(입력창 메시지 : 숫자를 입력하세요(1~10))
+
+        function changeImg() {
+            var num = window.prompt("숫자를 입력하세요(1~10)")
+            if(num>0 && num<=10){
+                document.getElementById("target").src = "images/" + num + ".jpg";
+            } else{
+                alert("해당 숫자의 상품이 없습니다.")
+            }
+
+
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <img src = "images/1.jpg" id="target" onClick="changeImg()" />
+    
+</body>
+</html>

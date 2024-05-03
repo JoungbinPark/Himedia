@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05_Control_IF.html</title>
+    <script type = "text/javaScript">
+        var ans = prompt("숫자 하나를 입력하세요", "10");
+        var num = Number(ans);
+
+        // if(num %2 == 0){
+        //     document.write("<h2>입력한 숫자는 짝수입니다.</h2>")
+        // }
+        // var i = num%2;
+        // if(i == 1){
+        //     document.write("<h2>입력한 숫자는 홀수입니다.</h2>")
+        // }
+        
+        // if문 (짝수 홀수)
+        if(num%2 == 0){
+            document.write("<h2>입력한 숫자는 짝수입니다.</h2>")
+        } else {
+            document.write("<h2>입력한 숫자는 홀수입니다.</h2>")
+        }
+
+        // else-if문 (양수 음수 0)
+        if(num > 0){
+            document.write("<h2>입력한 숫자는 양수입니다.</h2>")
+        } else if(num<0){
+            document.write("<h2>입력한 숫자는 음수입니다.</h2>")
+        } else{
+            document.write("<h2>입력한 숫자는 0입니다.</h2>")
+        }
+        
+        // else-if문의 반복사용 (학점 판명)
+        if(num>=90){
+            document.write("<h2>입력한 숫자는 A학점입니다.</h2>")
+        } else if(num>=80){
+            document.write("<h2>입력한 숫자는 B학점입니다.</h2>")
+        } else if(num>=70){
+            document.write("<h2>입력한 숫자는 C학점입니다.</h2>")
+        } else if(num>=60){
+            document.write("<h2>입력한 숫자는 D학점입니다.</h2>")
+        } else {
+            document.write("<h2>입력한 숫자는 F학점입니다.</h2>")
+        }
+
+        var result = (num>70)? "합격":"불합격";
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

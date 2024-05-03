@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_ControlEX01.html</title>
+    <script type = "text/javaScript">
+        //2024년 1월 1일이 월요일일 때 
+        //2024년의 월과 일을 입력받아 요일을 출력합니다.
+
+        var today = new Date;
+        var m = today.getMonth() + 1;
+        var date = today.getDate();
+
+        var month = Number(prompt("월을 입력하세요" , m));
+        var day = Number(prompt("일을 입력하세요", date));
+
+        var year = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        //총 일수 세기
+        var daysum = 0;
+        for(var i = 0; i<(month-1); i++){
+            daysum += year[i];
+        }
+        daysum += day;
+
+
+        //총 일수를 7로 나눈 나머지 확인
+        var check = daysum % 7;
+
+
+        //나머지에 맞는 요일 출력
+        var yoil = ['일', '월', '화', '수', '목', '금', '토'];
+
+        document.write("<h2> 그날의 요일은 " + yoil[check] +"요일</h2>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

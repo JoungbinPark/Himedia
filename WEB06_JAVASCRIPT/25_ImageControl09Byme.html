@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25_ImageControl09.html</title>
+    <style type = "text/css">
+        .view{position : relative; width : 400px; height:300px; border:5px solid blue; overflow:hidden;}
+
+        #imgs{position : absolute; width : 3200px; height:300px; border : 1px solid red; left:0; top:0;}
+
+        #imgs img{width : 400px; height:300px;}
+
+        #left{position : absolute; width:50px; height:50px; border: 1px solid green; z-index: 10; border-radius: 50%; bottom:0; left: 0; background-image:url(images/ico_movie_171115.png); background-position: -60px -460px; }
+
+        #right{position : absolute; width:50px; height:50px; border: 1px solid green; z-index: 10;  border-radius: 50%; bottom:0; right: 0;  background-image:url(images/ico_movie_171115.png); background-position: 0px -460px; }
+    </style>
+
+
+
+
+
+
+    <script type = "text/javaScript">
+        var stand = 0;
+        var dis = 400;
+
+        function goRight(){
+            if(stand>-2800){
+                stand -= dis;
+                document.getElementById("imgs").style.left = stand+"px";
+            }
+
+            return true;
+        }
+
+        function goLeft(){
+            if(stand<0){
+                stand += dis;
+                document.getElementById("imgs").style.left = stand+"px";
+            }
+
+            return true;
+        }
+
+    </script>
+</head>
+<body>
+    <div class="view">
+        <div id="imgs">
+            <img src="images/Koala.jpg" /><img src="images/Lighthouse.jpg" /><img src="images/Chrysanthemum.jpg" /><img src="images/Hydrangeas.jpg" /><img src="images/Jellyfish.jpg" /><img src="images/Penguins.jpg" /><img src="images/Tulips.jpg" /><img src="images/Desert.jpg" />
+        </div>
+
+        <div class="button" id = "left" onclick="return goLeft()"></div>
+        <div class="button" id = "right" onclick="return goRight()"></div>
+    </div>
+
+
+</body>
+</html>

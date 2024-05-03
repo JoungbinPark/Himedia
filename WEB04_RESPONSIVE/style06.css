@@ -1,0 +1,25 @@
+body{margin : 0; display: flex;}
+.container{
+    width:100vw;  /* vw(viewpoint width): 뷰포트 너비의 상대적인 길이 */
+    height:100vh;
+    border:10px solid black;
+    display :flex;
+    margin-right: 5px;
+    box-sizing :border-box;
+    flex-direction: column;
+}
+
+.box{
+    width:100px;
+    height:100px;
+    margin:2px;
+    background-color: blue;
+}
+
+#container1{
+    flex-wrap : wrap;
+}
+#container1{
+    flex-flow : column wrap;
+    /* flex-direction 과 flex-wrp을 한번에 지정 */
+}

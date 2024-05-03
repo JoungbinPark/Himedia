@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>00_Test02.html</title>
+    <style type = "text/css">
+        body{display:flex; flex-direction: column; justify-content:space-between; }
+        .container{width: 100%; background-color: rgb(239, 247, 129); display:flex; justify-content:center; align-items: center; margin-bottom: 20px;}
+        .container .main{width:70%; height: 100%; border:1px solid black; display : flex; justify-content: center; flex-direction: column; box-sizing: border-box;}
+        .container .title{width:100%; flex : 1; border-bottom:1px solid black; box-sizing: border-box; font-size:200%; font-weight: bold; line-height: 100px; text-align: center;}
+        .container .text{width:100%; flex: 1;}
+
+        .container .box{display : flex; border : 1px solid blue;}
+
+        .container .box .circle{ width : 200px; height: 200px; border-radius: 50%; overflow : hidden; }
+
+        .container .box .rect{display : flex; flex-direction: column; width : 300px; height : 200px; border : 1px solid black;}
+
+        .container .box .rect .title{height:30%; color : white; background-color: blue;}
+
+        .container .box .rect .text{height:70%; color:blue; background-color: white;}
+        
+
+        @media (max-width : 768px) { 
+            .container{flex-direction: column;}
+
+        }
+
+
+    </style>
+
+
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript">
+
+
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="title">Content Title01</div>
+            <div class="text">모든 국민은 근로의 권리를 가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를 시행하여야 한다.</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <div class="circle">
+                <img src="images/Koala.jpg" height="200" />
+            </div>
+
+            <div class="rect">
+                <div class="title">Segment</div>
+                <div class="text">모든 국민은 근로의 권리를 가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를 시행하여야 한다.</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="circle">
+                <img src="images/Koala.jpg" height="200" />
+            </div>
+
+            <div class="rect">
+                <div class="title">Segment</div>
+                <div class="text">모든 국민은 근로의 권리를 가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를 시행하여야 한다.</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="box">
+            <div class="circle">
+                <img src="images/Koala.jpg" height="200" />
+            </div>
+
+            <div class="rect">
+                <div class="title">Segment</div>
+                <div class="text">모든 국민은 근로의 권리를 가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를 시행하여야 한다.</div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="circle">
+                <img src="images/Koala.jpg" height="200" />
+            </div>
+
+            <div class="rect">
+                <div class="title">Segment</div>
+                <div class="text">모든 국민은 근로의 권리를 가진다. 국가는 사회적·경제적 방법으로 근로자의 고용의 증진과 적정임금의 보장에 노력하여야 하며, 법률이 정하는 바에 의하여 최저임금제를 시행하여야 한다.</div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    
+</body>
+</html>

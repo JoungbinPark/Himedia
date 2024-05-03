@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22_Display.html</title>
+    <style type = "text/css">
+        .box{background-color:yellow; width:300px; height:100px; margin:10px; border:1px solid black;}
+        #box1{display:block;}
+        /* display:block;     원래 div는 block임 */
+        #box2{display:inline;}
+        /* display:inline;    줄바꿈 속성이 없어서 한줄에 나열. width, height 값도 적용 불가 */
+        #box3{display:inline-block;}
+        /* inline에서 width, height만 살려내어 표시. 줄바꿈은 없음 */
+        #box4{display:none;}
+        /* 화면에서 사라진다. 자리도 없어진다. */
+
+
+    </style>
+</head>
+<body>
+    <span>Dummy</span>
+    <div id="box4" class = "box">
+        <span> 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한 사항은 법률로 정한다. 법원은 최고법원인 대법원과 각급법원으로 조직된다.
+        </span>
+    </div>
+    <span>Dummy</span>
+    <br /><br />
+
+
+
+    <span>Dummy</span>
+    <div id="box3" class = "box">
+        <span> 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한 사항은 법률로 정한다. 법원은 최고법원인 대법원과 각급법원으로 조직된다.
+        </span>
+    </div>
+    <span>Dummy</span>
+    <br /><br />
+
+
+    <span>Dummy</span>
+    <div id="box2" class = "box">
+        <span> 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한 사항은 법률로 정한다. 법원은 최고법원인 대법원과 각급법원으로 조직된다.
+        </span>
+    </div>
+    <span>Dummy</span>
+    <br /><br />
+
+
+    <span>Dummy</span>
+    <div id="box1" class = "box">
+        <span> 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한 사항은 법률로 정한다. 법원은 최고법원인 대법원과 각급법원으로 조직된다.
+        </span>
+    </div>
+    <span>Dummy</span>
+    <br /><br />
+
+</body>
+</html>

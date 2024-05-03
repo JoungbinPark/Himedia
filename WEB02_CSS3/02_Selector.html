@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Selector(선택자)
+    Style을 지정하는 세가지 방법 중 두번째 세번째의 경우에 기술한 style을 특정 태그에 적용하기 위해 선택하는 방법이 여러가지가 있습니다. 
+    Style 시트에 작성하고 지목한 선택이름을 Selector라 부르며 아래와 같이 선택자를 사용할 수 있습니다. 
+
+    1. Universal Selector
+    2. Tag Selector
+    3. Id Selector
+    4. Class Selector
+    5. 상대위치 및 기타 Selector
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_Selector.html</title>
+    <style type = "text/css">
+        /*universal selector*/
+        /* * {color : magenta; border:3px solid black;} */
+        /* 태그 전체 */
+
+        /* Tag Selector */
+        /* 태그의 이름을 선택자로 사용합니다. ID처럼 #을 붙이거나 하지는 않습니다. */
+        body{margin : 0px; border:2px dashed red;}
+        /* margin : 해당 태그의 바깥여백 */
+        h1{color:#FF0000;} 
+        h3{color : #0000FF;}
+
+        img{width:100px; height:50px; border:1px solid gray; vertical-align:middle;}
+
+        /* vertical-align; -> 그림과 텍스트의 수평맞춤
+        top : 위쪽맞춤, bottom : 아랫쪽맞춤 middle: 가운데맞춤 */
+
+
+    </style>
+
+</head>
+<body>
+    <h1>CSS Selector Basic</h1>
+    <h3>간사네 관련 포스팅 : 한글 Lorem Ipsum 생성기</h3>
+    <p> 주소 : http://guny.kr/stuff/klorem - 군인은 현역을 면한 후가 아니면 국무총리로 임명될 수 없다. 모든 국민은 법률이 정하는 바에 의하여 선거권을 가진다. 국가는 여자의 복지와 권익의 향상을 위하여 노력하여야 한다. </p>
+    <hr />
+    <h1>각 포털 사이트 로고</h1>
+    다음 <img src = "images/daum.png">&nbsp;&nbsp;&nbsp;&nbsp;
+    페이스북 <img src = "images/facebook.jpg">&nbsp;&nbsp;&nbsp;&nbsp;
+    네이트 <img src = "images/nate.png">&nbsp;&nbsp;&nbsp;&nbsp;
+
+</body>
+</html>

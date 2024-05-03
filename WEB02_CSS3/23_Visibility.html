@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23_Visibility.html</title>
+    <style type = "text/css">
+        .box{background-color:yellow; width:300px; height:100px; margin:10px; border:1px solid black;}
+        #box1{display:none;}        /* 태그까지 화면에서 제거 */
+        #box2{visibility:hidden;}   /* 태그가 화면에 보이지 않을 뿐 블럭형식이 동작 */
+        #box3{visibility:collapse;} /* collapse가 일반 태그에 적용되면, hidden과 같이 적용 */
+
+        table{visibility:collapse;} /* 테이블에 적용 시 블럭 형식만 남고 width, height 공간은 사라짐 */
+        
+
+    </style>
+</head>
+<body>
+    <span>Dummy</span>
+    <table border="1">
+        <tr><td>Test1</td><td>Teset2</td></tr>
+        <tr><td>Test3</td><td>Test4</td></tr>
+
+    </table>
+
+
+    <span>Dummy</span>
+    <div id="box1" class = "box">
+        <span> 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한 사항은 법률로 정한다. 법원은 최고법원인 대법원과 각급법원으로 조직된다.
+        </span>
+    </div>
+    <span>Dummy</span>
+    <br /><br />
+
+    <span>Dummy</span>
+    <div id="box2" class = "box">
+        <span> 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한 사항은 법률로 정한다. 법원은 최고법원인 대법원과 각급법원으로 조직된다.
+        </span>
+    </div>
+    <span>Dummy</span>
+    <br /><br />
+
+    <span>Dummy</span>
+    <div id="box3" class = "box">
+        <span> 감사원의 조직·직무범위·감사위원의 자격·감사대상공무원의 범위 기타 필요한 사항은 법률로 정한다. 법원은 최고법원인 대법원과 각급법원으로 조직된다.
+        </span>
+    </div>
+    <span>Dummy</span>
+    <br /><br />
+
+
+</body>
+</html>

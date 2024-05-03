@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22_CardContent.html</title>
+    <style type = "text/css">
+        section{width:100%; display:flex; justify-content: space-between;}
+        .media{ display:flex; background-color: #EEEEEE; width:600px; border:1px dotted black; margin:10px;}
+        .media img{ width:100px; margin-right:10px; flex:1;}
+        .media .media-body{ flex:3;}
+
+
+        /* 768 ~ 1024 media 세로로 */
+        @media (max-width:1024px) and (min-width:768px){
+            section{flex-direction: column;}
+            .media{width:100%; margin : 10px; }
+        }
+
+
+        /* ~768 이미지와 media-body가 세로로 */
+        @media (max-width:767px){
+            section{flex-direction: column;}
+            .media{flex-direction: column; width:90%; margin:10px; }
+            .media img{width:100%;}
+
+        }
+
+
+    </style>
+    <script src="script/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript"></script>
+</head>
+<body>
+    <section>
+        <div class="media">
+            <img src="images/photo-01.png"/>
+            <div class="media-body">
+                <h3>Feel the nature experience</h3>
+                <p>
+                    Nature, in the broadest sense, is the natural, physical, or material world or universe. "Nature" can refer to the phenomena of the physical world, and also to life in general. Thee study of nature is a large, if not the only, part of science.
+                </p>
+            </div>
+        </div>
+
+        <div class="media">
+            <img src="images/photo-02.png"/>
+            <div class="media-body">
+                <h3>Feel the nature experience</h3>
+                <p>
+                    Nature, in the broadest sense, is the natural, physical, or material world or universe. "Nature" can refer to the phenomena of the physical world, and also to life in general. Thee study of nature is a large, if not the only, part of science.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="media">
+            <img src="images/photo-03.png"/>
+            <div class="media-body">
+                <h3>Feel the nature experience</h3>
+                <p>
+                    Nature, in the broadest sense, is the natural, physical, or material world or universe. "Nature" can refer to the phenomena of the physical world, and also to life in general. Thee study of nature is a large, if not the only, part of science.
+                </p>
+            </div>
+        </div>
+
+
+    </section>
+    
+</body>
+</html>

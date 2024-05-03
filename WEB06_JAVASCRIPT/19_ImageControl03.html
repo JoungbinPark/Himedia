@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19_ImageControl03.html</title>
+    <script type = "text/javaScript">
+        //이미지를 클릭할 때마다 1->2->3->4->로 이동하게 코딩. 10에서는 다시 ->1
+        var num = 1;
+        function changeImg(){
+
+            num++;
+            if(num>10) num=1;
+            document.getElementById("target").src = "images/" + num + ".jpg";
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <img src = "images/1.jpg" id = "target" onClick="changeImg()"/>
+    
+</body>
+</html>
