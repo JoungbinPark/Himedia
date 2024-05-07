@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+C:\Users\hi\workspace\Himedia\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\915870366.index
+\WEB08_JSP_SERVLET\src\main\java
+C:\Users\hi\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\915870366.index
+\WEB08_JSP_SERVLET\src\main\java

@@ -5,6 +5,22 @@ class Line{
 	Line(int x, int y){
 		this.x = x; this.y = y;
 	}
+	
+	public boolean equals(Object obj) {
+		//obj와 this의 각각의 멤버변수 x와 y를 비교. 같으면 true, 다르면 false를 return
+		//a1 -> this		a2 -> obj
+		//부모참조변수가 자식인스턴스의 멤버변수에 접근이 불가능하므로 형변환이 필요
+		
+		if(obj instanceof Line) {
+			return false;
+		}
+		Line target = (Line)obj;
+		// x변수와 y변수를 비교
+		
+		boolean result = (this.x == target.x) && (this.y == target.y); 
+			
+		return result;
+	}
 }
 
 
