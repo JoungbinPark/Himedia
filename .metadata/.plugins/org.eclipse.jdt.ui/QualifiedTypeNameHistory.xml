@@ -1,16 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="days01.ClassThis01"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="days02.StaticA"/>
-    <fullyQualifiedTypeName name="days02.MemberCall"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.sql.Date"/>
-    <fullyQualifiedTypeName name="java.util.Calendar"/>
-    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="JDBC.RentDao"/>
-    <fullyQualifiedTypeName name="test02.BoardDTO"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-</qualifiedTypeNameHistroy>
+<qualifiedTypeNameHistroy/>
