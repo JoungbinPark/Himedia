@@ -18,20 +18,17 @@ public class UpdateBoardAction implements Action {
 		BoardDao bdao = BoardDao.getInstance();
 		BoardDto bdto = new BoardDto();
 		
-		bdto.setNum( Integer.parseInt( request.getParameter("num")));
-		bdto.setUserid( request.getParameter("userid"));
-		bdto.setPass( request.getParameter("pass"));
-		bdto.setTitle( request.getParameter("title"));
-		bdto.setEmail( request.getParameter("email"));
-		bdto.setContent( request.getParameter("content"));
+		bdto.setNum( Integer.parseInt( request.getParameter("num") ) );
+		bdto.setUserid( request.getParameter("userid") ) ;
+		bdto.setPass( request.getParameter("pass") );
+		bdto.setTitle( request.getParameter("title") );
+		bdto.setEmail( request.getParameter("email") );
+		bdto.setContent( request.getParameter("content") );
 		
 		bdao.updateBoard( bdto );
 		
-		//response.sendRedirect("board.do?command=main");
+		// response.sendRedirect("board.do?command=main");
 		response.sendRedirect("board.do?command=boardViewWithoutCnt&num=" + bdto.getNum() );
-
-		
-
 	}
 
 }

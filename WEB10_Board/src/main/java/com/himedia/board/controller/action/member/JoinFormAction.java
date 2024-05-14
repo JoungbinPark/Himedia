@@ -15,7 +15,6 @@ public class JoinFormAction implements Action{
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		RequestDispatcher rd = request.getRequestDispatcher("member/joinForm.jsp");
 		rd.forward(request, response);
-		
 	}
 
 }

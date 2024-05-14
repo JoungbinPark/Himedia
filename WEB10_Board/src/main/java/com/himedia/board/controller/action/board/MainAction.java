@@ -16,14 +16,22 @@ public class MainAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 게시판의 게시물을 모두 조회해서 request에 담고 main.jsp로 포워딩합니다. 
+		// 게시판의 게시물을 모두 조회해서  request 에 담고 main.jsp  로  포워딩합니다
 		BoardDao bdao = BoardDao.getInstance();
-		ArrayList<BoardDto> list = bdao.getAllBoard();
+		ArrayList<BoardDto> list =  bdao.getAllBoard();
 		request.setAttribute("boardList", list);
 		RequestDispatcher rd = request.getRequestDispatcher("main.jsp");
 		rd.forward(request, response);
-		
-
 	}
 
 }
+
+
+
+
+
+
+
+
+
+

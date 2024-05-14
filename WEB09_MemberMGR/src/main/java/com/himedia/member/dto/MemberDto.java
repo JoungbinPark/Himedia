@@ -1,11 +1,10 @@
-package com.himedia.member;
+package com.himedia.member.dto;
 
 public class MemberDto {
 	private String id;
 	private String pwd;
 	private String name;
 	private String phone;
-	
 	
 	public String getId() {
 		return id;
@@ -31,4 +30,6 @@ public class MemberDto {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	
+	
 }

@@ -3,13 +3,12 @@ package com.himedia.board.dto;
 import java.sql.Timestamp;
 
 public class ReplyDto {
-	
+
 	private int replynum;
 	private int boardnum;
 	private String userid;
 	private Timestamp writedate;
 	private String content;
-	
 	
 	public int getReplynum() {
 		return replynum;
@@ -41,5 +40,6 @@ public class ReplyDto {
 	public void setContent(String content) {
 		this.content = content;
 	}
-
+	
+	
 }

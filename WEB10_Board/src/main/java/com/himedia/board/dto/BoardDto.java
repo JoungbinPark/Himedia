@@ -3,7 +3,7 @@ package com.himedia.board.dto;
 import java.sql.Timestamp;
 
 public class BoardDto {
-	
+
 	private int num;
 	private String pass;
 	private String userid;
@@ -12,7 +12,6 @@ public class BoardDto {
 	private String content;
 	private int readcount;
 	private Timestamp writedate;
-	
 	
 	public int getNum() {
 		return num;
@@ -64,5 +63,4 @@ public class BoardDto {
 	}
 	
 	
-
 }
