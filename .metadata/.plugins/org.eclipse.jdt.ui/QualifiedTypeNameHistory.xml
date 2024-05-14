@@ -6,8 +6,10 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="com.himedia.board.dto.MemberDto"/>
-    <fullyQualifiedTypeName name="com.himedia.board.dao.MemberDao"/>
     <fullyQualifiedTypeName name="com.himedia.board.util.Dbm"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="com.himedia.board.dao.MemberDao"/>
+    <fullyQualifiedTypeName name="com.himedia.board.dto.BoardDto"/>
+    <fullyQualifiedTypeName name="com.himedia.board.dao.BoardDao"/>
 </qualifiedTypeNameHistroy>

@@ -43,3 +43,34 @@ insert into board(pass, userid, email, title, content)
 values('1234', 'hong2', 'hong2@naver.com', '맛집공유', '맛집 공유 및 추천해주세요.');
 
 select * from board
+
+CREATE TABLE `board`.`reply` (
+  `replynum` INT NOT NULL AUTO_INCREMENT,
+  `boardnum` INT NOT NULL,
+  `userid` VARCHAR(45) NOT NULL,
+  `writedate` DATETIME NOT NULL DEFAULT now(),
+  `content` VARCHAR(500) NOT NULL,
+  PRIMARY KEY (`replynum`),
+  INDEX `f1_idx` (`boardnum` ASC) VISIBLE,
+  INDEX `f2_idx` (`userid` ASC) VISIBLE,
+  CONSTRAINT `f1`
+    FOREIGN KEY (`boardnum`)
+    REFERENCES `board`.`board` (`num`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `f2`
+    FOREIGN KEY (`userid`)
+    REFERENCES `board`.`member` (`userid`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;
+
+select * from reply;
+
+
+drop table reply;
+
+insert into reply (boardnum, userid, content) values(8, 'hong1', '반갑습니다. 수고하세요.');
+insert into reply (boardnum, userid, content) values(8, 'hong2', '또 뵐께요. 안녕히가세요.');

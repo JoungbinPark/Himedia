@@ -21,3 +21,5 @@ C:\Users\hi\workspace\Himedia\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsea
 \WEB08_SERVLET\src\main\java
 C:\Users\hi\workspace\Himedia\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2819941692.index
 \WEB08_SERVLET\src\main\java
+C:\Users\hi\workspace\Himedia\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3503321024.index
+\WEB10_Board\src\main\java
