@@ -42,8 +42,8 @@ insert into board(pass, userid, email, title, content)
 values('1234', 'hong2', 'hong2@naver.com', '맛집공유', '맛집공유 및 추천해주세요');
 
 select * from member
-select * from board;
-
+select * from board limit 10 offset 10;
+select * from reply;
 
 
 

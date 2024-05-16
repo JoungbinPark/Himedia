@@ -4,8 +4,10 @@ import com.himedia.board.controller.action.Action;
 import com.himedia.board.controller.action.board.BoardViewAction;
 import com.himedia.board.controller.action.board.BoardViewWithoutCntAction;
 import com.himedia.board.controller.action.board.DeleteBoardAction;
+import com.himedia.board.controller.action.board.DeleteReplyAction;
 import com.himedia.board.controller.action.board.InsertBoardAction;
 import com.himedia.board.controller.action.board.InsertBoardFormAction;
+import com.himedia.board.controller.action.board.InsertReplyAction;
 import com.himedia.board.controller.action.board.MainAction;
 import com.himedia.board.controller.action.board.UpdateBoardAction;
 import com.himedia.board.controller.action.board.UpdateBoardFormAction;
@@ -42,6 +44,8 @@ public class ActionFactory {
 		else if( command.equals("updateMember") ) ac = new UpdateMemberAction();
 		else if( command.equals("deleteMember") ) ac = new DeleteMemberAction();
 		
+		
+		
 		// board
 		else if( command.equals("main") ) ac = new MainAction();
 		else if( command.equals("insertBoardForm") ) ac = new InsertBoardFormAction();
@@ -51,6 +55,10 @@ public class ActionFactory {
 		else if( command.equals("updateBoard") ) ac = new UpdateBoardAction();
 		else if( command.equals("boardViewWithoutCnt") ) ac = new BoardViewWithoutCntAction();
 		else if( command.equals("deleteBoard") ) ac = new DeleteBoardAction();
+		else if( command.equals("insertReply") ) ac = new InsertReplyAction();
+		else if( command.equals("deleteReply") ) ac = new DeleteReplyAction();
+
+		
 		
 		return ac;
 	}

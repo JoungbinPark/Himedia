@@ -67,6 +67,8 @@ padding:10px; margin:1px;}
 .reply_title{ background:blue; color:white;}
 
 
+.paging{display:flex; justify-content:center; font-size:110%; font-weight:bold; padding:20px 0;} 
+a{text-decoration:none;}
 
 @media (max-width:768px){
      .login-form{ width:100%;}
