@@ -14,7 +14,7 @@
 <div id="main_container">
 	<h2>게시글 수정</h2>
 	<div class="board">
-		<form class="insertBoard" method="post" name="insertBoard" action="board.do">
+		<form class="insertBoard" method="post" name="insertBoard" action="board.do" enctype="multipart/form-data">
 			<div class="field">
 				<label>작성자</label>
 				<input type="text" name="userid" value="${board.userid}" readonly/>
@@ -35,6 +35,24 @@
 				<label>내용</label>
 				<textarea name="content"rows="10" cols="100">${board.content}</textarea>
 			</div>
+			<div class="field">
+				<label>이미지</label>
+				<input type="file" name="image" />
+			</div>
+			<div class = "field">
+				<label>기존이미지</label>
+				<c:choose>
+					<c:when test="${empty board.saveFilename }">
+						<img src = "images/noname.jpg" height="80" style="text-align:left" />
+					</c:when>
+					<c:otherwise>
+						<img src="images/${board.saveFilename}" height="80" />
+					</c:otherwise>
+				</c:choose>&nbsp;&nbsp;
+			
+			</div>
+			<input type="hidden" name ="oldimage" value="${board.image}"/>
+			<input type="hidden" name ="oldsaveFilename" value="${board.saveFilename}"/>
 			<div class="field">
 				<input type="submit" value="수정완료" onClick="return updateBoardCheck('${board.pass}')" />
 				<input type="button" value="되돌아가기" onClick="" />

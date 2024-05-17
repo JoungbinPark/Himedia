@@ -5,8 +5,12 @@ C:\Users\hi\workspace\Himedia\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsea
 \WEB09_MemberMGR\src\main\java
 C:\Users\hi\workspace\Himedia\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\61893311.index
 \WEB10_Board\src\main\java
+C:\Users\hi\workspace\Himedia\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3186349890.index
+\WEB12_ShoesShops\src\main\java
 C:\Users\hi\workspace\Himedia\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1128389073.index
 \WEB10_FILE_Upload\src\main\java
+C:\Users\hi\workspace\Himedia\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1221461873.index
+\WEB12_ShoesShop\src\main\java
 C:\Users\hi\workspace\Himedia\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\331909912.index
 \WEB10_Board\src\main\java
 C:\Users\hi\workspace\Himedia\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1098334217.index

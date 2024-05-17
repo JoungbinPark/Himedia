@@ -44,7 +44,7 @@ values('1234', 'hong2', 'hong2@naver.com', '맛집공유', '맛집공유 및 추
 select * from member
 select * from board limit 10 offset 10;
 select * from reply;
-
+select * from board order by num desc;
 
 
 

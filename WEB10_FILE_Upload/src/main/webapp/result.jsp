@@ -8,8 +8,9 @@
 </head>
 <body>
 <h3>
-filename : ${filename}
-saveFilename : ${saveFilename}
+filename : ${filename}<br>
+saveFilename : ${saveFilename}<br>
+<img src = "upload/${saveFilename}" />
 </h3>
 
 

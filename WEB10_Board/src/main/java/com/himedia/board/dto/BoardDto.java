@@ -13,6 +13,8 @@ public class BoardDto {
 	private int readcount;
 	private Timestamp writedate;
 	private int replycnt;
+	private String image;
+	private String saveFilename;
 	
 	public int getReplycnt() {
 		return replycnt;
@@ -67,6 +69,18 @@ public class BoardDto {
 	}
 	public void setWritedate(Timestamp writedate) {
 		this.writedate = writedate;
+	}
+	public String getImage() {
+		return image;
+	}
+	public void setImage(String image) {
+		this.image = image;
+	}
+	public String getSaveFilename() {
+		return saveFilename;
+	}
+	public void setSaveFilename(String saveFilename) {
+		this.saveFilename = saveFilename;
 	}
 	
 	
