@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="com.himedia.board.dto.MemberDto"/>
     <fullyQualifiedTypeName name="com.himedia.board.util.Dbm"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="com.himedia.board.dao.MemberDao"/>
     <fullyQualifiedTypeName name="com.himedia.board.dto.BoardDto"/>
@@ -20,4 +19,6 @@
     <fullyQualifiedTypeName name="jakarta.servlet.http.Part"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="com.himedia.shop.dao.MemberDao"/>
 </qualifiedTypeNameHistroy>

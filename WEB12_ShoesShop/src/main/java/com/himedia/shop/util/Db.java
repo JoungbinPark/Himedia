@@ -14,14 +14,17 @@ public class Db {
 
 	public static Connection getConnection() {
 		Connection con = null;
-		try {
-			Context initContext = new InitialContext();
-			Context envContext = (Context)initContext.lookup("java:/comp/env");
-			DataSource ds = (DataSource)envContext.lookup("jdbc/MysqlDB");
-			con = ds.getConnection();
-		}catch(NamingException | SQLException e) { e.printStackTrace(); 
-		}
-		return null;
+
+			try {
+				Context initContext = new InitialContext();
+				Context envContext = (Context)initContext.lookup("java:/comp/env");
+				DataSource ds = (DataSource)envContext.lookup("jdbc/MysqlDB");
+				con = ds.getConnection();
+			} catch (SQLException e) {				e.printStackTrace();
+			} catch (NamingException e) {				e.printStackTrace();
+			}
+
+		return con;
 	}
 
 	public static void close(Connection con, PreparedStatement pstmt, ResultSet rs) {

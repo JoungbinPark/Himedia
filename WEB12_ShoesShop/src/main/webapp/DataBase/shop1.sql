@@ -2,7 +2,7 @@ SET SESSION FOREIGN_KEY_CHECKS=0;
 
 /* Drop Tables */
 
-DROP TABLE IF EXISTS adress;
+DROP TABLE IF EXISTS address;
 DROP TABLE IF EXISTS cart;
 DROP TABLE IF EXISTS order_detail;
 DROP TABLE IF EXISTS orders;
@@ -15,7 +15,7 @@ DROP TABLE IF EXISTS product;
 
 /* Create Tables */
 
-CREATE TABLE adress
+CREATE TABLE address
 (
 	zip_num varchar(15) NOT NULL,
 	sido varchar(30) NOT NULL,
@@ -25,6 +25,7 @@ CREATE TABLE adress
 	zip_code varchar(30)
 );
 
+select * from address;
 
 CREATE TABLE cart
 (
@@ -52,6 +53,7 @@ CREATE TABLE member
 	PRIMARY KEY (userid)
 );
 
+select * from member;
 
 CREATE TABLE orders
 (
