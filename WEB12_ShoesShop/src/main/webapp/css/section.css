@@ -31,6 +31,7 @@ section{
    margin:2px;*/
    display: flex;
    flex-direction: row;
+   justify-contents:center;
 }
 
 .sub_menu{

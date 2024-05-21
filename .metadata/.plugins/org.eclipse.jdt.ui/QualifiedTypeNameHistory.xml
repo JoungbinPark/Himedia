@@ -21,4 +21,9 @@
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="com.himedia.shop.dao.MemberDao"/>
+    <fullyQualifiedTypeName name="com.himedia.shop.dao.ProductDao"/>
+    <fullyQualifiedTypeName name="com.himedia.shop.dto.CartVO"/>
+    <fullyQualifiedTypeName name="com.himedia.shop.dao.CartDao"/>
+    <fullyQualifiedTypeName name="com.himedia.shop.util.Db"/>
+    <fullyQualifiedTypeName name="com.himedia.shop.dao.OrderDao"/>
 </qualifiedTypeNameHistroy>

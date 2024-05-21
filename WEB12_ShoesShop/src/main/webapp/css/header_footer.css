@@ -70,6 +70,7 @@ header {
 	background-color: blueviolet;
 	margin: 10px auto;
 	left: 10px;
+	position:absolute;
 }
 
 .hmenu div:nth-child(1) {

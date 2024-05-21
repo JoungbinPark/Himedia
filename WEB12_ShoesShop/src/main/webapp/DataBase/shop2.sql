@@ -4,6 +4,8 @@ values('one', '1111', '김나리', '133-110', '서울시 성동구 성수동1가
 insert into member(userid, pwd, name, zip_num, address1, address2, phone, email)
 values('two', '2222', '김길동', '130-120', '서울시 송파구 잠실2동', '리센츠아파트 201-505', '011-123-1234', 'acc@abc.com');
 
+select * from member;
+
 --상품입력
 insert into product(name, kind, price1, price2, price3, content, image, savefilename) 
 values('크로그다일부츠', '2', 40000, 50000, 10000, '오리지날 크로그다일부츠 입니다.', 'w2.jpg', 'w2.jpg');
