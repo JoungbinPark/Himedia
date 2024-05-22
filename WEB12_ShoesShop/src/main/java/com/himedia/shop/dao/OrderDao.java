@@ -114,4 +114,38 @@ public class OrderDao {
 		return list;
 	}
 
+	public ArrayList<Integer> selectOseqOrderIng(String userid) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		con = Db.getConnection();
+		String sql = "select distinct oseq from order_view where userid=? and result='1' order by oseq desc";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, userid);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				list.add(rs.getInt("oseq"));
+			}
+		}  catch (SQLException e) { e.printStackTrace();
+		} finally { Db.close(con, pstmt, rs);
+		}
+		return list;
+	}
+
+	public ArrayList<Integer> selectOseqOrderAll(String userid) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
+		con = Db.getConnection();
+		String sql = "select distinct oseq from order_view where userid=? order by oseq desc";
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, userid);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				list.add(rs.getInt("oseq"));
+			}
+		}  catch (SQLException e) { e.printStackTrace();
+		} finally { Db.close(con, pstmt, rs);
+		}
+		return list;
+	}
 }

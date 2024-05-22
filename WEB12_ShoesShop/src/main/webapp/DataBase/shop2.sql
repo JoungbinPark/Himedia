@@ -83,6 +83,7 @@ from orders o, order_detail d, product p, member m
 where o.oseq = d.oseq and o.userid = m.userid and d.pseq = p.pseq
 
 select * from order_view;
+select distinct oseq from order_view where userid='one' and result='1' order by oseq desc
 
 --신상품 View 생성
 create or replace view new_pro_view
@@ -97,3 +98,8 @@ as
 select pseq, name, price2, image from product where bestyn='Y' order by indate desc limit 4;
 
 select * from best_pro_view;
+
+select * from orders;
+select * from order_detail where oseq=4;
+
+update order_detail set result='2' where odseq in(7,8);;

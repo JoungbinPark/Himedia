@@ -13,9 +13,15 @@ import com.himedia.shop.controller.action.member.idcheckFormAction;
 import com.himedia.shop.controller.action.mypage.CartDeleteAction;
 import com.himedia.shop.controller.action.mypage.CartInsertAction;
 import com.himedia.shop.controller.action.mypage.CartListAction;
+import com.himedia.shop.controller.action.mypage.DeleteMemberAction;
+import com.himedia.shop.controller.action.mypage.MypageAction;
+import com.himedia.shop.controller.action.mypage.OrderAllAction;
+import com.himedia.shop.controller.action.mypage.OrderDetailAction;
 import com.himedia.shop.controller.action.mypage.OrderInsertAction;
 import com.himedia.shop.controller.action.mypage.OrderInsertOneAction;
 import com.himedia.shop.controller.action.mypage.OrderListAction;
+import com.himedia.shop.controller.action.mypage.UpdateMemberAction;
+import com.himedia.shop.controller.action.mypage.UpdateMemberFormAction;
 import com.himedia.shop.controller.action.product.CategoryAction;
 import com.himedia.shop.controller.action.product.ProductDetailAction;
 
@@ -51,6 +57,13 @@ public class ActionFactory {
 		else if( command.equals("orderInsert")) ac = new OrderInsertAction();
 		else if( command.equals("orderList")) ac = new OrderListAction();
 		else if( command.equals("orderInsertOne")) ac = new OrderInsertOneAction();
+		else if( command.equals("mypage")) ac = new MypageAction();
+		else if( command.equals("orderAll")) ac = new OrderAllAction();
+		else if( command.equals("updateMemberForm")) ac = new UpdateMemberFormAction();
+		else if( command.equals("updateMember")) ac = new UpdateMemberAction();
+		else if( command.equals("deleteMember")) ac = new DeleteMemberAction();
+		else if( command.equals("orderDetail")) ac = new OrderDetailAction();
+
 
 		return ac;
 	}
