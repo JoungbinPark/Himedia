@@ -17,21 +17,19 @@ public class CartListAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		HttpSession session = request.getSession();
 		MemberVO mvo = (MemberVO)session.getAttribute("loginUser");
 		
-		
-		if( mvo == null) {
+		if( mvo == null ) {
 			response.sendRedirect("shop.do?command=loginForm");
 		} else {
 			CartDao cdao = CartDao.getInstance();
-			ArrayList<CartVO> list = cdao.selectCart(mvo.getUserid());
-			
-			
+			ArrayList<CartVO> list = cdao.selectCart( mvo.getUserid() );
 			
 			int totalPrice = 0;
 			for( CartVO cvo : list) {
-				totalPrice += cvo.getPrice2() * cvo.getQuantity();
+				totalPrice += cvo.getPrice2()*cvo.getQuantity();
 			}
 			
 			request.setAttribute("totalPrice", totalPrice);

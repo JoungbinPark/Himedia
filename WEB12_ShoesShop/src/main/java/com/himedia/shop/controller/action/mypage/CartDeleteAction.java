@@ -14,15 +14,15 @@ public class CartDeleteAction implements Action {
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String[] cseqs = request.getParameterValues("cseq");
+		String [] cseqs = request.getParameterValues("cseq");
 		
-		CartDao cdao=CartDao.getInstance();
+		CartDao cdao = CartDao.getInstance();
 		
 		for( String cseq : cseqs) {
-			cdao.deleteCart(Integer.parseInt(cseq));
+			cdao.deleteCart( Integer.parseInt(cseq) );
 		}
-		
-		response.sendRedirect("shop.do?command=cartList");
+
+		response.sendRedirect("shop.do?command=cartList"); 
 
 	}
 

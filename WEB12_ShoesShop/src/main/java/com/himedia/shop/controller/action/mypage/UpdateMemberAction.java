@@ -15,15 +15,15 @@ public class UpdateMemberAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 전송되는 파라미터로 회원정보를 수정해주세요.
+		// 전송되는 파라미터로 회원정보를 수정해주세요
 		
 		HttpSession session = request.getSession();
 		MemberVO mvo = (MemberVO) session.getAttribute("loginUser");
-		if(mvo==null) {
-			response.sendRedirect("shop.do?command=loginForm");
-		} else{
-			MemberVO mvo1 = new MemberVO();
-			
+	    if(mvo==null) {
+	    	response.sendRedirect("shop.do?command=loginForm");
+	    }else {
+	    	
+	    	MemberVO mvo1 = new MemberVO();
 			mvo1.setUserid(request.getParameter("userid"));
 			mvo1.setPwd(request.getParameter("pwd"));
 			mvo1.setName(request.getParameter("name"));
@@ -37,10 +37,9 @@ public class UpdateMemberAction implements Action {
 			mdao.updateMember(mvo1);
 			
 			session.setAttribute("loginUser", mvo1);
-
-			response.sendRedirect("shop.do?command=index");
-		}
-
+			
+	    	response.sendRedirect("shop.do?command=index");
+	    }
 	}
 
 }

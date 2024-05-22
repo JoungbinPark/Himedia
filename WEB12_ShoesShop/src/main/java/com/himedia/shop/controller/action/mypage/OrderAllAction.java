@@ -17,32 +17,33 @@ public class OrderAllAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		
 		HttpSession session = request.getSession();
 		MemberVO mvo = (MemberVO) session.getAttribute("loginUser");
-		if (mvo == null) {
-			response.sendRedirect("shop.do?command=loginForm");
-		} else {
+	    if(mvo==null) {
+	    	response.sendRedirect("shop.do?command=loginForm");
+	    }else {
+	    	ArrayList<OrderVO> finalList = new ArrayList<OrderVO>();
+	    	OrderDao odao = OrderDao.getInstance();
+	    	
+	    	ArrayList<Integer> oseqList = odao.selectOseqOrderAll( mvo.getUserid() );
+	    	
+	    	for( Integer oseq : oseqList) {
+	    		ArrayList<OrderVO> orderListByOseq = odao.seletOrderByOseq(oseq);
+	    		OrderVO temp = (OrderVO)orderListByOseq.get(0);    
+	    		temp.setPname( temp.getPname() + " 포함 " + orderListByOseq.size() + "건" );
+	    		int totalPrice = 0;
+	    		for( OrderVO ovo : orderListByOseq) 
+	    			totalPrice += ovo.getPrice2() * ovo.getQuantity();    
+	    		temp.setPrice2(totalPrice);	    
+	    		finalList.add(temp);
+	    	}
+	    	request.setAttribute("finalList", finalList);
+	    	request.setAttribute("title", "총 주문 내역");
+	    	request.getRequestDispatcher("mypage/mypage.jsp").forward(request, response);
+	    	
+	    }
 
-			ArrayList<OrderVO> finalList = new ArrayList<OrderVO>();
-			OrderDao odao = OrderDao.getInstance();
-			ArrayList<Integer> oseqList = odao.selectOseqOrderAll(mvo.getUserid());
-
-			for (Integer oseq : oseqList) {
-				ArrayList<OrderVO> orderListByOseq = odao.selectOrderByOseq(oseq);
-				OrderVO temp = (OrderVO) orderListByOseq.get(0);
-				temp.setPname(temp.getPname() + "포함" + orderListByOseq.size() + "건");
-				int totalPrice = 0;
-				for (OrderVO ovo : orderListByOseq) {
-					totalPrice += ovo.getPrice2() * ovo.getQuantity();
-				}
-				temp.setPrice2(totalPrice);
-				finalList.add(temp);
-			}
-			request.setAttribute("finalList", finalList);
-			request.setAttribute("title", "총 주문내역");
-			request.getRequestDispatcher("mypage/mypage.jsp").forward(request, response);
-
-		}
 	}
+
 }

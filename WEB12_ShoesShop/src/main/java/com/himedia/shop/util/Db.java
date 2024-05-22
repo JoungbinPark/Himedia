@@ -13,17 +13,15 @@ import javax.sql.DataSource;
 public class Db {
 
 	public static Connection getConnection() {
-		Connection con = null;
-
-			try {
-				Context initContext = new InitialContext();
-				Context envContext = (Context)initContext.lookup("java:/comp/env");
-				DataSource ds = (DataSource)envContext.lookup("jdbc/MysqlDB");
-				con = ds.getConnection();
-			} catch (SQLException e) {				e.printStackTrace();
-			} catch (NamingException e) {				e.printStackTrace();
-			}
-
+		Connection con=null;		
+		try {
+			Context initContext = new InitialContext();
+			Context envContext = (Context)initContext.lookup("java:/comp/env");
+			DataSource ds = (DataSource)envContext.lookup("jdbc/MysqlDB");
+			con = ds.getConnection();
+		} catch (NamingException e) { e.printStackTrace();
+		} catch (SQLException e) {e.printStackTrace();
+		}		
 		return con;
 	}
 
@@ -32,7 +30,8 @@ public class Db {
 			if( con!=null) con.close();
 			if( pstmt!=null) pstmt.close();
 			if( rs!=null) rs.close();
-		} catch (SQLException e) { e.printStackTrace();
-		}
+		} catch (SQLException e) {  e.printStackTrace();  
+		}	
 	}
+
 }

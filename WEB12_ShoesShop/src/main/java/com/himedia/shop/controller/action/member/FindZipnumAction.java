@@ -17,15 +17,14 @@ public class FindZipnumAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String dong = request.getParameter("dong");
-		if( dong != null) { 
-			if( dong.equals("") == false) {
+		if( dong != null ) {
+			if( dong.equals("") == false ) {
 				MemberDao mdao = MemberDao.getInstance();
 				ArrayList<AddressVO> list = mdao.selectAddressByDong(dong);
-				request.setAttribute("addressList", list);
+				request.setAttribute("addressList" , list);
 			}
 		}
-		
-		request.getRequestDispatcher("member/findZipNum.jsp").forward(request, response);
+		request.getRequestDispatcher("member/findZipNum.jsp").forward(request, response); 
 
 	}
 

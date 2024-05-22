@@ -3,20 +3,20 @@ package com.himedia.shop.dto;
 import java.sql.Timestamp;
 
 public class OrderVO {
-	
+
 	private int odseq;
 	private int oseq;
-	private String userid;
-	private Timestamp indate;
+	private String userid; 
+	private Timestamp indate; 
 	private String mname;
 	private String zip_num;
 	private String address1;
 	private String address2;
-	private String phone;
+	private String phone;  
 	private int pseq;
 	private String pname;
 	private int quantity;
-	private int price2;
+	private int price2;  
 	private String result;
 	
 	public int getOdseq() {
@@ -103,7 +103,8 @@ public class OrderVO {
 	public void setResult(String result) {
 		this.result = result;
 	}
-
+	
+	
 	
 	
 }

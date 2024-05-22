@@ -27,6 +27,7 @@ CREATE TABLE address
 
 select * from address;
 
+
 CREATE TABLE cart
 (
 	cseq int NOT NULL AUTO_INCREMENT,
@@ -53,7 +54,6 @@ CREATE TABLE member
 	PRIMARY KEY (userid)
 );
 
-select * from member;
 
 CREATE TABLE orders
 (
@@ -99,7 +99,7 @@ CREATE TABLE qna
 	userid varchar(45) NOT NULL,
 	subject varchar(100) NOT NULL,
 	content varchar(1000) NOT NULL,
-	reply varchar(1000),
+	reply varchar(1000) ,
 	indate datetime DEFAULT now() NOT NULL,
 	PRIMARY KEY (qseq)
 );

@@ -23,7 +23,6 @@ public class IndexAction implements Action {
 		request.setAttribute("bestList", blist);
 		
 		request.getRequestDispatcher("main.jsp").forward(request, response);
-
 	}
 
 }

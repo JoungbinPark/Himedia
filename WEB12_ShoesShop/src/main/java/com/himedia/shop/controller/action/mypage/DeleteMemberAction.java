@@ -18,20 +18,19 @@ public class DeleteMemberAction implements Action {
 		
 		HttpSession session = request.getSession();
 		MemberVO mvo = (MemberVO) session.getAttribute("loginUser");
-		if(mvo==null) {
-			response.sendRedirect("shop.do?command=loginForm");
-		} else {
-			
-			MemberDao mdao = MemberDao.getInstance();
-			// 해당 회원의 useyn을 N으로 바꿔주세요.
-			mdao.deleteMember( mvo.getUserid());
-			
-			session.removeAttribute("loginUser");
-			
-			
-			session.setAttribute("message", "회원탈퇴가 완료되었습니다.");
-			response.sendRedirect("shop.do?command=loginForm");
-		}
+	    if(mvo==null) {
+	    	response.sendRedirect("shop.do?command=loginForm");
+	    }else {
+	    	
+	    	MemberDao mdao = MemberDao.getInstance();
+	    	// 해당 회원의 useyn을 N으로 바꿔주세요
+	    	mdao.deleteMember( mvo.getUserid() );
+	    	
+	    	session.removeAttribute("loginUser");
+	    	
+	    	session.setAttribute("message", "회원탈퇴가 완료되었습니다");
+	    	response.sendRedirect("shop.do?command=loginForm");
+	    }
 
 	}
 

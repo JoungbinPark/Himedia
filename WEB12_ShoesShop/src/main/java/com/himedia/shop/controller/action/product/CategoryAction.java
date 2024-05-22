@@ -19,13 +19,19 @@ public class CategoryAction implements Action {
 		String kind = request.getParameter("kind");
 		
 		ProductDao pdao = ProductDao.getInstance();
-		ArrayList<ProductVO> list = pdao.selectKindProduct(kind);
+		ArrayList<ProductVO> list = pdao.selectKindProduct( kind );
 		
-		String kindList[] = {"", "Heels", "Boots", "Sandals", "Snickers", "Slipers" };
+		String kindList[] = { "", "Heels", "Boots", "Sandals", "Snickers", "Slipers",  };
 		
 		request.setAttribute("kindProduct", list);
-		request.setAttribute("kind", kindList[Integer.parseInt(kind)]);
+		request.setAttribute("kind", kindList[ Integer.parseInt(kind) ] );
 		request.getRequestDispatcher("product/productKind.jsp").forward(request, response);
+
 	}
 
 }
+
+
+
+
+
