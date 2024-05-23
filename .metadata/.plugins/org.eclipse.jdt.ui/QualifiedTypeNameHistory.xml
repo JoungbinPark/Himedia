@@ -11,19 +11,22 @@
     <fullyQualifiedTypeName name="com.himedia.board.dao.MemberDao"/>
     <fullyQualifiedTypeName name="com.himedia.board.dto.BoardDto"/>
     <fullyQualifiedTypeName name="com.himedia.board.dto.ReplyDto"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="com.himedia.board.dao.BoardDao"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Calendar"/>
     <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.Part"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
-    <fullyQualifiedTypeName name="com.himedia.shop.dao.ProductDao"/>
     <fullyQualifiedTypeName name="com.himedia.shop.dto.CartVO"/>
     <fullyQualifiedTypeName name="com.himedia.shop.dao.CartDao"/>
-    <fullyQualifiedTypeName name="com.himedia.shop.util.Db"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="com.himedia.shop.dao.MemberDao"/>
     <fullyQualifiedTypeName name="com.himedia.shop.dao.OrderDao"/>
+    <fullyQualifiedTypeName name="com.himedia.shop.util.Db"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="com.himedia.shop.util.Paging"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.ServletContext"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.Part"/>
+    <fullyQualifiedTypeName name="com.himedia.shop.dao.AdminDao"/>
+    <fullyQualifiedTypeName name="com.himedia.shop.dao.ProductDao"/>
 </qualifiedTypeNameHistroy>

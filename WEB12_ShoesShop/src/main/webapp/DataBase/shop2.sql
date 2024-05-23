@@ -122,9 +122,10 @@ select * from order_detail where oseq=4;
 update order_detail set result = '2' 
 where odseq in( 7,8,9);
 
+insert into admins value('admin', 'admin', '관리자', '010-7777-7777');
+insert into admins value('scott', '1234', '홍길동', '010-6400-6068');
 
-
-
+select * from admins;
 
 
 
