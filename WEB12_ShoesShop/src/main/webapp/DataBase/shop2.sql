@@ -77,7 +77,7 @@ values( '배송이 많이 지연되고 있습니다', '언제 받을 수 있나�
 insert into qna ( subject, content, userid) 
 values( '불량품 교환 문의', '교환 또는 환불 등의 안내가 필요합니다. 유선안내부탁드려요', 'one');
 
-
+select * from qna;
 
 -- cart 안의 pseq로 상품이름과  그리고 userid로 사용자 이름을 함꼐 조회하는  view를 생성합니다
 create or replace view cart_view
@@ -128,7 +128,7 @@ insert into admins value('scott', '1234', '홍길동', '010-6400-6068');
 select * from admins;
 
 
-
+select * from order_view order by odseq desc;
 
 
 

@@ -27,6 +27,7 @@
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="jakarta.servlet.ServletContext"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.Part"/>
-    <fullyQualifiedTypeName name="com.himedia.shop.dao.AdminDao"/>
     <fullyQualifiedTypeName name="com.himedia.shop.dao.ProductDao"/>
+    <fullyQualifiedTypeName name="com.himedia.shop.dao.AdminDao"/>
+    <fullyQualifiedTypeName name="com.himedia.test1.util.Db"/>
 </qualifiedTypeNameHistroy>
